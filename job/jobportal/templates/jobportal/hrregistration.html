@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job</title>
+    <style type="text/css">
+        #header
+        {
+        height: 200px;
+        background-color: rgb(151, 226, 239);
+        background-image: url("/static/image/portal.png");
+        background-size: cover;
+        }
+        #middle
+        {
+          height: 600px;
+          background-color:rgb(227, 191, 227);
+          
+        }
+        
+        
+        #footer
+        {
+        height: 200px;
+        background-color:rgb(151, 226, 239);
+        }
+           
+       
+    </style>
+   
+</head>
+<body >
+    <div id="header">
+      <marquee width="100%"  behavior="alternate" direction="left"><h1>Register Company details </h1></marquee>
+      </div>
+      <div id="middle">
+    <form action="" method="post">
+        {% csrf_token %}
+            
+    
+            Email-<input type="email" name="email"  id="email"placeholder="enter your email" required >
+            <br><br>
+            Password-<input type="password" name="password" id="password" placeholder="enter password" required>
+            <br><br>
+            Mobile no-<input type="number" name="mobileno" placeholder="enter mobile number" required>
+            <br><br>
+            Companyname-<input type="text" name="companyname"  placeholder="enter companyname" required>
+            <br><br>
+           
+           
+          
+            <input type="submit" name="btnsub" value="Register"><br>
+
+            
+    </form>
+    <h3><a href="hrlogin">Hr, click to Login here</a></h3><br>
+            {{msg}}
+</div>
+<div id="footer">
+
+</div>
+   
+</body>
+</html>

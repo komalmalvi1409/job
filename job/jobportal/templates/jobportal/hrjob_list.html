@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="hrlogout">Logout </a>
+   <center> <h1>Job Details</h1></center>
+    {% for object in object_list %}
+
+    <!-- Display Objects -->
+
+    <li>{{ object.jobtitle }}</li>
+    <li>{{ object.jobdescription }}</li>
+    <li>{{object.experience}}</li>
+    <li>{{object.uploadimag}}</li>
+    <li>{{object.technology}}</li>
+    <li>{{object.postdate}}</li>
+    <li>{{object.duedate}}</li>
+
+   <a href="/jobportal/{{object.id}}">View Job</a>
+
+   <a href="/jobportal/{{object.id}}/update">Update Job</a>
+
+   <a href="/jobportal/{{object.id}}/delete">Delete Job</a>
+   <a href="alljobseeker">Jobseeker</a>
+
+    <hr/>
+
+    <!-- If object_list is empty  -->
+
+    {% empty %}
+
+    <li>No objects yet.</li>
+
+    {% endfor %}
+</body>
+</html>

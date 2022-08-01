@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job</title>
+    <style type="text/css">
+        #header
+        {
+        height: 200px;
+        background-color: rgb(151, 226, 239);
+        background-image: url("/static/image/portal.png");
+        background-size: cover;
+        }
+        #middle
+        {
+          height: 600px;
+          background-color:rgb(227, 191, 227);
+          text-align: center;
+          
+          
+          
+        }
+       
+        
+        
+        #footer
+        {
+        height: 200px;
+        background-color:rgb(151, 226, 239);
+        }
+           
+       
+    </style>
+</head>
+<body >
+    <div id="header">
+      <marquee width="100%"  behavior="alternate" direction="left"><h1>Login Job Page </h1></marquee>
+    </div>
+    <div id="middle">
+    <form action="" method="post">
+        {% csrf_token %}
+       
+       
+        
+            <br><BR>
+            
+                User Name-<input type="email" name="email" placeholder="enter your email" value="{{ucookie}}" required>
+                <br><br>
+                Password-<input type="password" name="password" placeholder="enter password"  value="{{upass}}" required>
+                <br><br> 
+                <input type="checkbox"  name="chk"  value="rem" {% if ucookie %} checked {% endif  %}/>remember me
+                <br><br>
+                
+                <input type="submit" name="btnsub" value="login"><br>
+
+                <h3><a href="registration">Jobseeker, click to Register here</a></h3> 
+                <br>
+                {{msg}}  
+            
+    
+        
+    </form>
+</div>
+<div id="footer">
+
+</div>
+</body>
+</html>

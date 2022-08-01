@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="logout">Logout </a><br>
+   <center> <h1>Job Details</h1></center>
+   <form action="" method="post">
+    {% csrf_token %}
+    <table border="1">
+    
+  
+    {% for d1 in d %} 
+  <li>Job id :  {{d1.id}}</li>
+ <li> Job title :  {{d1.jobtitle}}</li>
+   <li>Job description :  {{d1.jobdescription}}</li>
+   <li>Experience :  {{d1.experience}}</li>
+   <li>Technology :  {{d1.technology}}</li>
+ <li> Postdate :  {{d1.postdate}}</li>
+   <li>Duedate  :  {{d1.duedate}}</li><br>
+   
+   <a href="resume1">Apply</a>
+    {% endfor %}
+        
+    
+    </form>
+   
+
+   
+  
+
+   
+
+   
+</body>
+</html>

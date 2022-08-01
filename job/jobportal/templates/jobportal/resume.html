@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   <h1>Creat Your Cv</h1></center>
+   <a href="logout">Logout </a><br>
+    <form action="resume1" method="post">
+        {% csrf_token %}
+       
+        Name:<input type="text" name="name" placeholder="name" required/><br><br>
+        Gender-<input type="radio" name="gender" value="Male"  />Male
+        <input type="radio" name="gender" value="Female"  />Female
+        <br><br>
+        
+        City:<input type="text" name="city" placeholder="city"required /><br><br>
+        Pincode:<input type="text" name="pincode" placeholder="pin" required/><br><br>
+         State:<select name="state">
+            {% for c in res %}
+              {% if c == d %}
+              <option value="{{c}}" selected>{{c}}</option>
+              {% else %} 
+              <option value="{{c}}">{{c}}</option>
+              {% endif %}
+            {% endfor %} 
+         </select>
+         <br><br>
+        Mobileno:<input type="text" name="mobileno" placeholder="mobile no" required/><br><br>
+        Email:<input type="email" name="email" placeholder="email" required/><br><br>
+        job city:<input type="text" name="jobcity" placeholder="job_city" required/><br><br>
+        Address:<input type="text" name="address" placeholder="Address" required/><br><br>
+        
+        Carreir-Objective:<input type="text" name="objetive" placeholder="Objective" required/><br><br>
+        Workexperience:<input type="text" name="workexperience" placeholder="Workexperience" required/><br><br>
+   
+        EDUCATION QUALIFICATION<br>
+        Hsc:<select name="hsc">
+            {% for c in c1 %}
+              {% if c == d %}
+              <option value="{{c}}" selected>{{c}}</option>
+              {% else %} 
+              <option value="{{c}}">{{c}}</option>
+              {% endif %}
+            {% endfor %} 
+         </select>
+         subject<select name="subject">
+            {% for c in b %}
+              {% if c == d %}
+              <option value="{{c}}" selected>{{c}}</option>
+              {% else %} 
+              <option value="{{c}}">{{c}}</option>
+              {% endif %}
+            {% endfor %} 
+         </select>
+         Passingyear<select name="passingyear1">
+            {% for c in y %}
+              {% if c == d %}
+              <option value="{{c}}" selected>{{c}}</option>
+              {% else %} 
+              <option value="{{c}}">{{c}}</option>
+              {% endif %}
+            {% endfor %} 
+         </select>
+        Grade<input type="number" name="percentage" placeholder="percentage" required/>
+         Univercity<input type="text" name="board" placeholder="Board" required/><br><br>
+         12th/Diploma:<select name="12th/diploma">
+            {% for c in c1 %}
+              {% if c == d %}
+              <option value="{{c}}" selected>{{c}}</option>
+              {% else %} 
+              <option value="{{c}}">{{c}}</option>
+              {% endif %}
+            {% endfor %} 
+         </select>
+        Branch <select name="branch1">
+            {% for c in b %}
+              {% if c == d %}
+              <option value="{{c}}" selected>{{c}}</option>
+              {% else %} 
+              <option value="{{c}}">{{c}}</option>
+              {% endif %}
+            {% endfor %} 
+         </select>
+         Passingyear<select name="passingyear2">
+            {% for c in y %}
+              {% if c == d %}
+              <option value="{{c}}" selected>{{c}}</option>
+              {% else %} 
+              <option value="{{c}}">{{c}}</option>
+              {% endif %}
+            {% endfor %} 
+         </select>
+         Grade<input type="number" name="percentage1" placeholder="percentage" required/>
+         univercity<input type="text" name="univercity1" placeholder="univercity" required/><br><br>
+        Degree: <select name="degree">
+            {% for c in c1 %}
+              {% if c == d %}
+              <option value="{{c}}" selected>{{c}}</option>
+              {% else %} 
+              <option value="{{c}}">{{c}}</option>
+              {% endif %}
+            {% endfor %} 
+         </select>
+         Branch:<select name="branch2">
+            {% for c in b %}
+              {% if c == d %}
+              <option value="{{c}}" selected>{{c}}</option>
+              {% else %} 
+              <option value="{{c}}">{{c}}</option>
+              {% endif %}
+            {% endfor %} 
+         </select>
+         Passingyear:<select name="passingyear3">
+            {% for c in y %}
+              {% if c == d %}
+              <option value="{{c}}" selected>{{c}}</option>
+              {% else %} 
+              <option value="{{c}}">{{c}}</option>
+              {% endif %}
+            {% endfor %} 
+         </select>
+         Grade<input type="number" name="percentage2" placeholder="percentage" required/>
+         univercity<input type="text" name="univercity2" placeholder="univercity" required/><br><br>
+       
+        IT SKILLS:<input type="text" name="itskill" placeholder="ITSKILLS" required/><br><br>
+        
+        HOBBIES & INTEREST:<input type="text" name="hobbies" placeholder="HOBBIESINTEREST" required/><br><br>
+        DECLARATION:<input type="text" name="declaration" placeholder="DECLARATION" required/><br><br>
+        
+        <input type="submit"name="btnsubmit" value="submit"/>
+        <br><br>
+     
+    </form> 
+     
+    
+</body>
+</html>

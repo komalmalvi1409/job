@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job</title>
+    <style type="text/css">
+        #header
+        {
+        height: 200px;
+        background-color: rgb(151, 226, 239);
+        background-image: url("/static/image/portal.png");
+        background-size: cover;
+        }
+        #middle
+        {
+          height: 600px;
+          background-color:rgb(227, 191, 227);
+        }
+    
+        
+        #footer
+        {
+        height: 200px;
+        background-color:rgb(151, 226, 239);
+        }
+           
+       
+    </style>
+</head>
+<body>
+    <div id="header">
+      <a href="logout">Logout </a><br>
+      <marquee width="100%"  behavior="alternate" direction="right"><h1>Are You Apply </h1></marquee>
+    </div>
+    <div id="middle">
+      
+       
+        <form action="candidate" method="post">
+        {% csrf_token %}
+        
+        Email-<input type="email" name="email" placeholder="Enter email" />
+        <br><br>
+        Job id-<select name="ddljob">
+          <option value="">Select job Profile</option>
+          {% for data in res %}
+            {% if  data.id == jid %}
+            
+              <option value="{{data.id}}"  selected>{{data.jobtitle}}</option>
+            
+            {% endif %}
+              <option value="{{data.id}}" >{{data.jobtitle}}</option>
+            
+              
+          {% endfor %}
+        </select>
+ <br><br> 
+        Date-<input type="date"  name="applydate" placeholder="enter date"  />
+        
+         <br><br>
+
+        Name-<input type="text"  name="name" placeholder="enter name"  />
+        <br><br>
+       
+        <input type="submit"  name="btnsubmit" value="save">
+        <br>
+        <br>
+        {{msg}}
+        </form>
+</div>
+<div id="footer">
+
+</div>
+    
+</body>
+</html>
